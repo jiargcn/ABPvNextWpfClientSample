@@ -1,0 +1,83 @@
+﻿<Window x:Class="Win.Fmp.Wpf.FinancialMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Win.Fmp.Wpf"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d"
+        Title="FinancialMainWindow" Height="450" Width="800">
+    <!--<Window.Resources>
+        <Style x:Key="menuItemAdvStyle" TargetType="syncfusion:MenuItemAdv">
+            <Setter Property="Icon" Value="{Binding ImagePath}" />
+            <Setter Property="InputGestureText" Value="{Binding GestureText}" />
+            <Setter Property="Command" Value="{Binding MenuItemClickCommand}" />
+            <Setter Property="CommandParameter" Value="{Binding MenuItemName}" />
+            <Setter Property="IsCheckable" Value="{Binding IsCheckable}" />
+        </Style>
+        <Style TargetType="{x:Type syncfusion:MenuItemAdv}">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Background" Value="White" />
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" Value="Red"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type Hyperlink}">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Foreground" Value="Blue"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/Images1/fw_logo.png" Width="100" />
+        <syncfusion:MenuAdv Grid.Column="1"
+                            x:Name="MenuAdv"
+                            Background="White"
+                            BorderBrush="White"
+                            ExpandMode="ExpandOnClick" 
+                            VerticalAlignment="Center"  >
+            <syncfusion:MenuAdv.Items>
+                <syncfusion:MenuItemAdv Header="系统管理"/>
+                <syncfusion:MenuItemAdv Header="预实分析" />
+                <syncfusion:MenuItemAdv Header="滚动预测" />
+                <syncfusion:MenuItemAdv Header="成本管理" >
+                    <syncfusion:MenuItemAdv Header="产品成本"   />
+                    <syncfusion:MenuItemAdv Header="降成本"    />
+                </syncfusion:MenuItemAdv>
+                <syncfusion:MenuItemAdv Header="投资管理" />
+                <syncfusion:MenuItemAdv Header="指标分析" />
+                <syncfusion:MenuItemAdv Header="存货管理" />
+                <syncfusion:MenuItemAdv Header="综合业务" />
+                <syncfusion:MenuItemAdv Header="预算编制" />
+            </syncfusion:MenuAdv.Items>
+        </syncfusion:MenuAdv>
+        <StackPanel Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Center" Margin="0,0,10,0">
+            <TextBlock Margin="10,2">
+                <Hyperlink>
+                  <Run Text="公司" />
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock Margin="5,2">
+                <Hyperlink Click="VersionLink_Click">
+                  <Run Text="版本" />
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+        <Border Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="Silver" BorderThickness="0,1,0,0"/>
+    </Grid>-->
+</Window>

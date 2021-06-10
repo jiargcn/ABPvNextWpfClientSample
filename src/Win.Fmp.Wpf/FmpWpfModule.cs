@@ -1,14 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Autofac;
 using Volo.Abp.Modularity;
-using Win.Fmp.EntityFrameworkCore;
 
 namespace Win.Fmp.Wpf
 {
     [DependsOn(
-        typeof(FmpHttpApiModule),
-        typeof(FmpApplicationModule),
-        typeof(FmpEntityFrameworkCoreDbMigrationsModule),
+        typeof(FmpHttpApiClientModule),
+        typeof(FmpApplicationContractsModule),
+      
         typeof(AbpAutofacModule)
     )]
     public class FmpWpfModule: AbpModule
