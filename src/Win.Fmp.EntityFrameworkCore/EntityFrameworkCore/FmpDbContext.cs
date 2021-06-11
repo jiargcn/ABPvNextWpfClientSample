@@ -5,6 +5,7 @@ using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.Identity;
 using Volo.Abp.Users.EntityFrameworkCore;
+using Win.Fmp.Data;
 
 namespace Win.Fmp.EntityFrameworkCore
 {
@@ -21,6 +22,8 @@ namespace Win.Fmp.EntityFrameworkCore
     public class FmpDbContext : AbpDbContext<FmpDbContext>
     {
         public DbSet<AppUser> Users { get; set; }
+
+        public DbSet<Person> Persons { get; set; }
 
         /* Add DbSet properties for your Aggregate Roots / Entities here.
          * Also map them inside FmpDbContextModelCreatingExtensions.ConfigureFmp
@@ -51,6 +54,8 @@ namespace Win.Fmp.EntityFrameworkCore
             });
 
             /* Configure your own tables/entities inside the ConfigureFmp method */
+
+
 
             builder.ConfigureFmp();
         }

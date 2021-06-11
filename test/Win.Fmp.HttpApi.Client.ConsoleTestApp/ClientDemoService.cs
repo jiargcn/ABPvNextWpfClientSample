@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Volo.Abp.Application.Dtos;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Identity;
 
@@ -9,9 +10,12 @@ namespace Win.Fmp.HttpApi.Client.ConsoleTestApp
     {
         private readonly IProfileAppService _profileAppService;
 
-        public ClientDemoService(IProfileAppService profileAppService)
+        private readonly IPersonService _personService;
+
+        public ClientDemoService(IProfileAppService profileAppService, IPersonService personService)
         {
             _profileAppService = profileAppService;
+            _personService = personService;
         }
 
         public async Task RunAsync()
@@ -21,6 +25,20 @@ namespace Win.Fmp.HttpApi.Client.ConsoleTestApp
             Console.WriteLine($"Email    : {output.Email}");
             Console.WriteLine($"Name     : {output.Name}");
             Console.WriteLine($"Surname  : {output.Surname}");
+
+            var input = new PagedAndSortedResultRequestDto
+            {
+                SkipCount = 0,
+                    MaxResultCount = 100,
+                    Sorting = "",
+            };
+            var persons =await _personService.GetListAsync(input);
+            foreach (var person in persons.Items)
+            {
+                Console.WriteLine(person.Name+" "+person.Age);
+            }
+
+
         }
     }
 }

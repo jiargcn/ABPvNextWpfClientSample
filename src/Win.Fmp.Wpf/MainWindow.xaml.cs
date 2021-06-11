@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,6 +9,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Extensions.DependencyInjection;
+using Volo.Abp;
+using Volo.Abp.DependencyInjection;
 
 namespace Win.Fmp.Wpf
 {
@@ -20,9 +20,24 @@ namespace Win.Fmp.Wpf
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+
+
+        private readonly IWpfPersonService _personService;
+
+        public MainWindow(IWpfPersonService personService)
         {
+            _personService = personService;
+
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var str= _personService.GetPersons();
+            Label1.Content = str;
+
+        }
+
+
     }
 }

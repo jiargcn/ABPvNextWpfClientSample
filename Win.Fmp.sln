@@ -39,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Win.Fmp.HttpApi.Client.Cons
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Win.Fmp.DbMigrator", "src\Win.Fmp.DbMigrator\Win.Fmp.DbMigrator.csproj", "{AA94D832-1CCC-4715-95A9-A483F23A1A5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win.Fmp.Wpf", "src\Win.Fmp.Wpf\Win.Fmp.Wpf.csproj", "{36DC054A-3A0A-4118-B593-566298384679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Win.Fmp.Wpf", "src\Win.Fmp.Wpf\Win.Fmp.Wpf.csproj", "{36DC054A-3A0A-4118-B593-566298384679}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

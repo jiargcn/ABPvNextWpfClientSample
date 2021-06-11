@@ -79,6 +79,8 @@ namespace Win.Fmp.Wpf
                     services.AddApplication<FmpWpfModule>();
                 }).Build();
         }
+
+        
     }
 
 }

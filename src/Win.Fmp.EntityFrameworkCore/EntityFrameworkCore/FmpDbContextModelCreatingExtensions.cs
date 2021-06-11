@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
+using Win.Fmp.Data;
 
 namespace Win.Fmp.EntityFrameworkCore
 {
@@ -8,6 +10,15 @@ namespace Win.Fmp.EntityFrameworkCore
         public static void ConfigureFmp(this ModelBuilder builder)
         {
             Check.NotNull(builder, nameof(builder));
+
+            builder.Entity<Person>(b =>
+            {
+                b.ToTable("Persons");
+                //Sharing the same table "AbpUsers" with the IdentityUser
+
+                b.ConfigureByConvention();
+
+            });
 
             /* Configure your own tables/entities inside here */
 

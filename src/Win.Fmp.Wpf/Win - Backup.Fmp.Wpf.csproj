@@ -26,8 +26,10 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\Win.Fmp.Application.Contracts\Win.Fmp.Application.Contracts.csproj" />
     <ProjectReference Include="..\Win.Fmp.HttpApi.Client\Win.Fmp.HttpApi.Client.csproj" />
   </ItemGroup>
+
 
 
 </Project>
